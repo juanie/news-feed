@@ -1,2 +1,2 @@
 # news-feed
-simple news feed from new api 
+simple news feed from news api 
