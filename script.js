@@ -35,20 +35,32 @@ function addItemsToPage() {
         detailsDiv.className = "news-item__details";
         li.appendChild(detailsDiv);
 
-        // Add image to div detail
+        // // Add image to div detail
+        // var img = document.createElement("img");
+        // img.src = item.urlToImage;
+        // img.className = "news-item__image";
+        // detailsDiv.appendChild(img);
+
+        //===========================================
+        // var url = document.createElement("url");
+        // url.className = "news-item__url";
+        // url.innerText = item.url;
+        // li.appendChild(url);
+
+        //++++++++++++++++++++++++++++++++++++++;
+        var a = document.createElement("a");
+        a.href = item.url;
+        a.className = "news-item__link";
+        detailsDiv.appendChild(a);
+        a.setAttribute("target", "_blank"); 
+        // // Add image to div detail
+
         var img = document.createElement("img");
         img.src = item.urlToImage;
         img.className = "news-item__image";
-        detailsDiv.appendChild(img);
+        // detailsDiv.appendChild(img);
 
-        //===========================================
-        var url = document.createElement("url");
-        url.className = "news-item__url";
-        url.innerText = item.url;
-        li.appendChild(url);
-
-        //++++++++++++++++++++++++++++++++++++++;
-
+        a.appendChild(img);
         //===============================================================
         // Create Div for text
         var textDiv = document.createElement("div");
