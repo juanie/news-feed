@@ -52,7 +52,7 @@ function addItemsToPage() {
         a.href = item.url;
         a.className = "news-item__link";
         detailsDiv.appendChild(a);
-        a.setAttribute("target", "_blank"); 
+        a.setAttribute("target", "_blank");
         // // Add image to div detail
 
         var img = document.createElement("img");
@@ -124,9 +124,9 @@ function dateTime() {
     // display good morning,afternoon and good evening
     var greet;
 
-    if (hrs < 12) greet = "Good Morning";
-    else if (hrs >= 12 && hrs <= 17) greet = "Good Afternoon";
-    else if (hrs >= 17 && hrs <= 24) greet = "Good Evening";
+    if (hrs < 12) greet = "Good Morning, Juana";
+    else if (hrs >= 12 && hrs <= 17) greet = "Good Afternoon, Juana";
+    else if (hrs >= 17 && hrs <= 24) greet = "Good Evening, Juana";
 
     var currentDate = document.getElementById("currentDate");
     currentDate.innerText = date;
@@ -137,4 +137,3 @@ function dateTime() {
     currentMessage.innerHTML = greet;
 }
 setInterval(dateTime, 1000);
-
